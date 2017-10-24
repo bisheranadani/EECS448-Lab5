@@ -33,38 +33,38 @@
     if(empty($postIDs)){
       echo "<h1>No posts selected </h1>";
     }
-    // else{
-    //   $numposts = count($postIDs);
-    //   $postid = $postIDs[0];
-    //   echo $postid;
-    //   $sql = "DELETE FROM Posts WHERE post_id = '$postid';";
-    //   for($i=1; $i<count; i++){
-    //     $postid = $postIDs[$i];
-    //     $sql .= "DELETE FROM Posts WHERE post_id = '$postid';";
-    //   }
-      //
-      //
-      //
-      // if ($mysqli->multi_query($sql)) {
-      // do {
-      //     /* store first result set */
-      //     if ($result = $mysqli->store_result()) {
-      //         while ($row = $result->fetch_row()) {
-      //         }
-      //         $result->free();
-      //     }
-      //     else{
-      //       echo "Post deleted";
-      //     }
-      //     /* print divider */
-      //     if ($mysqli->more_results()) {
-      //         printf("-----------------\n");
-      //     }
-      //   } while ($mysqli->next_result());
-      // }
+    else{
+      $numposts = count($postIDs);
+      $postid = $postIDs[0];
+      echo $postid;
+      $sql = "DELETE FROM Posts WHERE post_id = '$postid';";
+      for($i=1; $i<count; i++){
+        $postid = $postIDs[$i];
+        $sql .= "DELETE FROM Posts WHERE post_id = '$postid';";
+      }
 
 
-    // }
+
+      if ($mysqli->multi_query($sql)) {
+      do {
+          /* store first result set */
+          if ($result = $mysqli->store_result()) {
+              while ($row = $result->fetch_row()) {
+              }
+              $result->free();
+          }
+          else{
+            echo "Post deleted";
+          }
+          /* print divider */
+          if ($mysqli->more_results()) {
+              printf("-----------------\n");
+          }
+        } while ($mysqli->next_result());
+      }
+
+
+    }
 }
 
   //
