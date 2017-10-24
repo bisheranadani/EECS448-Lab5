@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Shop</title>
+</head>
+<body>
+  <h1>Welcome to the Shop</h1>
+  <h2>Our product selection</h2>
+  <form action="customerBackend.php" method="post">
+      <label for="banana">Banana </label><input type="number" name="banana" value="0"> <br>Price: $20<br>
+      <label for="apple">Apple </label><input type="number" name="apple" value="0"> <br>Price: $75<br>
+      <label for="kiwi">Kiwi </label><input type="number" name="kiwi" value="0"> <br>Price: $150<br>
+
+  <h2>Shipping options</h2>
+  <input type="radio" name="ship" value="free">Free 7 day<br>
+  <input type="radio" name="ship" value="fifty">$50.00 overnight<br>
+  <input type="radio" name="ship" value="five">$5.00 three day<br>
+
+  <h2>Profile</h2>
+  <h3>Sign in to purchase</h3>
+  <label for="username">Username: </label><input type="text" name="username"><br>
+  <label for="password">Password: </label><input type="password" name="password"><br>
+
+  <br>
+  <input id="form" type="submit" name="submit" value="Submit">
+  </form>
+  <p id="msg"></p>
+  <br>
+  <input id="resetBtn" type="reset" value="Reset">
+
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="formChecker.js"></script>
+</html>
